@@ -14,6 +14,7 @@ start = 0;
 prev= initialValue;
 }
 
+
 else{
 	start = 1;
 	prev = arr[i-1];
@@ -23,6 +24,11 @@ else{
 for (var i = start; i < arr.length; i++) {
 	curr = arr[i];
 	out=callback(prev,curr,i,arr);
+	prev=out;
+console.log(prev);
+console.log(curr);
+console.log(out);
+
 	}
 return out;
 
