@@ -8,7 +8,7 @@ for (var i = 0; i < arr.length; i++) {
 //	console.log(arr[i]);
 	//out [i] = callback();
 	out[i] =callback(arr[i],i,arr);
-
+//	console.log(out);
 	//callback(arr[i]);
 }
 return out;
