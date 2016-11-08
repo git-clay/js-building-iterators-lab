@@ -17,7 +17,7 @@ prev= initialValue;
 
 else{
 	start = 1;
-	prev = arr[i-1];
+	prev = arr[0];
 }
 
 
@@ -27,6 +27,7 @@ for (var i = start; i < arr.length; i++) {
 	prev=out;
 console.log(prev);
 console.log(curr);
+console.log(initialValue);
 console.log(out);
 
 	}
