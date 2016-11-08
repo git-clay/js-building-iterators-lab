@@ -3,7 +3,10 @@
 function myEach(arr, callback) {
   
   //  CODE INSIDE HERE   //
-
+console.log('myEach');
+for (var i = 0; i < arr.length; i++) {
+	callback(arr[i],i,arr);
+}
 }
 
 /*
