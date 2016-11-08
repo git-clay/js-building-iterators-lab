@@ -6,34 +6,30 @@ function myReduce(arr, callback, initialValue) {
 //  CODE INSIDE HERE   //
 var out;
 var prev;
-if(initialValue!==undefined && arr.length===0){
+
+if(initialValue!==undefined && arr.length===0){		//catches an empty array and returns initialValue (only if there is one)
 	return initialValue;
 }
-else if(initialValue!==undefined){
-start = 0;
-prev= initialValue;
+else if(initialValue!==undefined){			//if there is an initialValue start the count at [0]
+	start = 0;
+	prev= initialValue;
 }
-
-
-else{
+else{										//start at [1] with the 'previous' value at [0]
 	start = 1;
 	prev = arr[0];
 }
 
 
-for (var i = start; i < arr.length; i++) {
+for (var i = start; i < arr.length; i++) {		//main loop where the magic happens
 	curr = arr[i];
 	out=callback(prev,curr,i,arr);
 	prev=out;
-console.log(prev);
-console.log(curr);
-console.log(initialValue);
-console.log(out);
-
+//console.log(prev);
+//console.log(curr);
+//console.log(initialValue);
+//console.log(out);
 	}
 return out;
-
-
 }
 /*
  Best if you don't code out here.
