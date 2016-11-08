@@ -6,10 +6,10 @@ function myReduce(arr, callback, initialValue) {
 //  CODE INSIDE HERE   //
 var out;
 var prev;
-if(initialValue>=0 && arr.length===0){
+if(initialValue!==undefined && arr.length===0){
 	return initialValue;
 }
-else if(initialValue>=0){
+else if(initialValue!==undefined){
 start = 0;
 prev= initialValue;
 }
